@@ -64,6 +64,49 @@ select {
 
 /* CSS Reset End */
 
+/* Utilities Start */
+.gap-small {
+    gap: var(--space-small);
+}
+
+.gap-medium {
+    gap:var(--space-medium);
+}
+
+.padding-small {
+    padding: var(--space-small); 
+}
+
+.padding-medium {
+    padding: var(--space-medium);
+}
+
+.padding-large {
+    padding: var(--space-large);
+}
+
+.padding-xlarge {
+    padding: var(--space-xlarge);
+}
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/* Utilities End */
+
+.icon {
+    width: var(--space-large);
+}
+
 body {
     background-color: white;
 }
@@ -79,4 +122,8 @@ h1 {
 
 h2 {
     font-size: 2rem;
+}
+
+footer {
+
 }
