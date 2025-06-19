@@ -1,7 +1,8 @@
 :root {
     --highlight-color: #73FBD3;
     --main-color: #59D2FE;
-    --contrast-color: #5C7AFF;
+    --contrast-color-dark: #5C7AFF;
+    --contrast-color-light: #44E5E7;
     --space-small: 8px;
     --space-medium: 16px;
     --space-large: 32px;
@@ -91,6 +92,10 @@ select {
     padding: var(--space-xlarge);
 }
 
+.margin-small {
+    margin: var(--space-small);
+}
+
 .flex {
     display: flex;
 }
@@ -101,6 +106,10 @@ select {
 
 .column {
     flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
 }
 
 .align-center {
@@ -126,7 +135,41 @@ html {
   font-style: normal;
 }
 
+.stamp {
+  --r: 20px; /* control the radius */
 
+  height: 100px;
+  aspect-ratio: 1;
+  padding: var(--r);
+  background: var(--contrast-color-dark);
+  mask: 
+    radial-gradient(50% 50%,#0000 66%,#000 67%) round 
+     var(--r) var(--r)/calc(2*var(--r)) calc(2*var(--r)), 
+    conic-gradient(#000 0 0) content-box;
+}
+
+/* HTML: <div class="dashed-circle"></div> */
+.dashed-circle {
+  --n: 18;   /* number of dashes */
+  --d: 8deg; /* control the space between dashes */
+  
+  height: 100px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 5px; /* border thickness */
+  /* the coloration (more examples: https://css-tip.com/dashed-rounded-border/ */
+  background: 
+    repeating-conic-gradient(
+      #44E5E7 0 calc(  360deg/var(--n)), 
+      #5C7AFF 0 calc(2*360deg/var(--n))
+    );
+  mask: 
+    linear-gradient(#0000 0 0) content-box intersect, 
+    repeating-conic-gradient(from calc(var(--d)/2),
+     #000  0 calc(360deg/var(--n) - var(--d)),
+     #0000 0 calc(360deg/var(--n))
+   );
+}
 
 /* External Resources End */
 
@@ -138,10 +181,19 @@ html {
     max-width: 400px;
 }
 
+.skill-icon {
+  background-color: var(--contrast-color-light);
+  height: 100px;
+  aspect-ratio: 1;
+  padding: 10px;
+  border: 5px solid var(--contrast-color-dark);
+  border-radius:50%;
+  box-sizing: border-box;
+}
+
 body {
     /* background-color: white; */
     background-image: linear-gradient(to left, rgba(255,0,0,0), var(--main-color));
-}
 }
 
 header {
@@ -167,9 +219,8 @@ h2 {
     background-image: linear-gradient(to right, rgba(255,0,0,0), var(--highlight-color));
 }
 
-
 footer {
-
+    padding: var(--space-large);
 }
 
 /* * {
