@@ -7,62 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sheila's Portfolio</title>
     <link rel="stylesheet" href="./styles.css">
+    <!-- Material Icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital@0;1&family=Rubik+Maze&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    Hello World
+    
+    <header class="flex padding-medium align-center">
 
-    <header>
-        
         <nav>
             <ul>
-                <li><a href="">About</a></li>
-                <li><a href="">Skills</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        
-        <h1>???</h1>
+
+        <h1>Sheila S.</h1>
     </header>
 
-    <main>
+    <main class="flex column">
         <section>
-            <h2>About</h2>
+            <h2 class="flex justify-right padding-small" id="about">About</h2>
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nisi dui, ullamcorper non
-                    accumsan
-                    non, iaculis et risus. Donec vitae nisl in eros tincidunt fringilla sed a lectus. Sed eleifend
-                    convallis
-                    cursus. Duis sit amet ipsum eu turpis rhoncus semper semper in libero. Pellentesque venenatis mattis
-                    eros in lobortis. Phasellus tempor pretium laoreet. Ut varius, urna nec ullamcorper convallis, sem
-                    magna
-                    porta mi, eget suscipit dui est sed magna.</p>
+                <p>Welcome to Sheila's portfolio! This was created for She Codes Plus 2025, and I hope it showcases what I've learnt. </p>
+                <p>I really have no idea what else to put here for now, so expect this space to be an evolving document.</p>
 
-                <p>Praesent at est ac justo commodo tincidunt nec non sapien. Nunc sit amet interdum nulla. Aliquam
-                    suscipit
-                    ligula ut est condimentum tristique. Suspendisse sed sem consequat, bibendum nisi vitae, venenatis
-                    eros.
-                    Donec quis pharetra est, ac vulputate elit. In luctus fermentum magna, sed volutpat tortor varius
-                    at.
-                    Nulla facilisi. Vestibulum vehicula id arcu sed facilisis.</p>
+                
             </div>
         </section>
 
         <section>
-            <h2>Skills</h2>
+            <h2 class="flex justify-right padding-small" id="skills">Skills</h2>
+            <div>
+                <p>Below is a list of skill I learnt. As a bonus, I have a separate <a href="./diary.html">page</a> containing personal thoughts I had whilst learning, a diary of sort if you will.</p>
+            </div>
             <div>
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>Python</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                    <li>Item 6</li>
                 </ul>
             </div>
         </section>
 
         <section>
-            <h2>Contact</h2>
-            <div>
-                <form class="flex column">
+            <h2 class="flex justify-right padding-small" id="contact">Contact</h2>
+            <div class="flex justify-center padding-medium">
+                <form class="flex column form-width align-center">
                     <label for="name">Name</label>
                     <input type="text" id="name">
                     <label for="email">Email</label>
@@ -77,12 +76,12 @@
     </main>
 
     <footer>
-        <nav>
-            <ul class="flex row">
+        <nav class="">
+            <ul class="flex row justify-center">
                 <li><a href="#" class="padding-small"><img src="img/LI-In-Bug.png" alt="LinkedIn" class="icon"></a></li>
             </ul>
         </nav>
-        <div>
+        <div class="flex justify-center">
             <p>&copy; Sheila S.</p>
         </div>
 

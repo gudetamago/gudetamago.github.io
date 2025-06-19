@@ -1,5 +1,7 @@
 :root {
-    --brand: #73FBD3;
+    --highlight-color: #73FBD3;
+    --main-color: #59D2FE;
+    --contrast-color: #5C7AFF;
     --space-small: 8px;
     --space-medium: 16px;
     --space-large: 32px;
@@ -101,14 +103,45 @@ select {
     flex-direction: column;
 }
 
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-right {
+    justify-content: right;
+}
+
 /* Utilities End */
+
+/* External Resources Start */
+
+html {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* External Resources End */
 
 .icon {
     width: var(--space-large);
 }
 
+.comic {
+    max-width: 400px;
+}
+
 body {
-    background-color: white;
+    /* background-color: white; */
+    background-image: linear-gradient(to left, rgba(255,0,0,0), var(--main-color));
+}
 }
 
 header {
@@ -116,14 +149,30 @@ header {
     flex-direction: row;
 }
 
+.form-width {
+    width: 50%;
+}
+
 h1 {
+    font-family: "Rubik Maze", system-ui;
+    font-weight: 400;
+    font-style: normal;
     font-size: 3.5rem;
+    padding: var(--space-medium);
 }
 
 h2 {
     font-size: 2rem;
+    /* background-color: var(--highlight-color); */
+    background-image: linear-gradient(to right, rgba(255,0,0,0), var(--highlight-color));
 }
+
 
 footer {
 
 }
+
+/* * {
+    border: 1px solid red;
+    
+} */
