@@ -42,7 +42,8 @@
                         document.</p>
 
                 </div>
-                <img class="profile" src="./img/20250621_Profile.png" alt="A cartoon representation of Sheila desperately needing coffee">
+                <img class="profile" src="./img/20250621_Profile.png"
+                    alt="A cartoon representation of Sheila desperately needing coffee">
             </div>
 
         </section>
@@ -75,13 +76,17 @@
         <section>
             <h2 class="flex justify-right padding-small" id="contact">Contact</h2>
             <div class="flex justify-center padding-medium">
-                <form class="flex column form-width align-center">
-                    <label for="name">Name</label>
-                    <input type="text" id="name">
-                    <label for="email">Email</label>
-                    <input type="email" id="email">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" rows="10" cols="30"></textarea>
+                <form class="flex column form-width align-center" action="https://formspree.io/f/xpwrjnae"
+                    method="POST">
+                    <label for="name">Name
+                        <input type="text" name="name">
+                    </label>
+                    <label for="email">Email
+                        <input type="email" name="email">
+                    </label>               
+                    <label for="message">Your Message
+                        <textarea name="message" rows="10" cols="30"></textarea>
+                    </label>                
                     <input type="submit" value="Submit" class="button">
 
                 </form>
