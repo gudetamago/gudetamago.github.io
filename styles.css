@@ -3,6 +3,7 @@
     --main-color: #59D2FE;
     --contrast-color-dark: #5C7AFF;
     --contrast-color-light: #44E5E7;
+    --shadow-color: #4A8FE7;
     --space-small: 8px;
     --space-medium: 16px;
     --space-large: 32px;
@@ -183,6 +184,7 @@ html {
 
 .skill-icon {
   background-color: var(--contrast-color-light);
+  background-image:  linear-gradient(to bottom right, var(--contrast-color-light), var(--shadow-color));;
   height: 100px;
   aspect-ratio: 1;
   padding: 10px;
@@ -192,8 +194,8 @@ html {
 }
 
 body {
-    /* background-color: white; */
-    background-image: linear-gradient(to left, rgba(255,0,0,0), var(--main-color));
+    background-image: linear-gradient(to left, rgba(255,0,0,0) , var(--main-color) );
+    /* background-image: linear-gradient(var(--main-color) 50%, rgba(255,0,0,0) 100%); */
 }
 
 header {
@@ -217,6 +219,36 @@ h2 {
     font-size: 2rem;
     /* background-color: var(--highlight-color); */
     background-image: linear-gradient(to right, rgba(255,0,0,0), var(--highlight-color));
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 footer {
