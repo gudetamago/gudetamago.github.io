@@ -232,7 +232,13 @@ footer {
 /* Media Starts */
 
 @media screen and (min-width: 400px) {
-
+    header, main, footer {
+        max-width: 600px;
+    }
+    .profile {
+        width: 100px;
+        height: auto;
+    }
 }
 
 /* 768 mobile
@@ -241,9 +247,9 @@ large mobile
 
 @media screen and (min-width: 768px) {
    
-    /* section {
+    header, main, footer {
         max-width: 900px;
-    } */
+    }
 }
 
 /* Media Ends */
