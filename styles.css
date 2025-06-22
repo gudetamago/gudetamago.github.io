@@ -74,11 +74,11 @@ select {
 }
 
 .gap-medium {
-    gap:var(--space-medium);
+    gap: var(--space-medium);
 }
 
 .padding-small {
-    padding: var(--space-small); 
+    padding: var(--space-small);
 }
 
 .padding-medium {
@@ -127,84 +127,23 @@ select {
 
 /* Utilities End */
 
-/* External Resources Start */
+/* High-level scope Starts */
 
 html {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.stamp {
-  --r: 20px; /* control the radius */
-
-  height: 100px;
-  aspect-ratio: 1;
-  padding: var(--r);
-  background: var(--contrast-color-dark);
-  mask: 
-    radial-gradient(50% 50%,#0000 66%,#000 67%) round 
-     var(--r) var(--r)/calc(2*var(--r)) calc(2*var(--r)), 
-    conic-gradient(#000 0 0) content-box;
-}
-
-/* HTML: <div class="dashed-circle"></div> */
-.dashed-circle {
-  --n: 18;   /* number of dashes */
-  --d: 8deg; /* control the space between dashes */
-  
-  height: 100px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  padding: 5px; /* border thickness */
-  /* the coloration (more examples: https://css-tip.com/dashed-rounded-border/ */
-  background: 
-    repeating-conic-gradient(
-      #44E5E7 0 calc(  360deg/var(--n)), 
-      #5C7AFF 0 calc(2*360deg/var(--n))
-    );
-  mask: 
-    linear-gradient(#0000 0 0) content-box intersect, 
-    repeating-conic-gradient(from calc(var(--d)/2),
-     #000  0 calc(360deg/var(--n) - var(--d)),
-     #0000 0 calc(360deg/var(--n))
-   );
-}
-
-/* External Resources End */
-
-.icon {
-    width: var(--space-large);
-}
-
-.comic {
-    max-width: 400px;
-}
-
-.skill-icon {
-  background-color: var(--contrast-color-light);
-  background-image:  linear-gradient(to bottom right, var(--contrast-color-light), var(--shadow-color));;
-  height: 100px;
-  aspect-ratio: 1;
-  padding: 10px;
-  border: 5px solid var(--contrast-color-dark);
-  border-radius:50%;
-  box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
-    background-image: linear-gradient(to left, rgba(255,0,0,0) , var(--main-color) );
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), var(--main-color));
     /* background-image: linear-gradient(var(--main-color) 50%, rgba(255,0,0,0) 100%); */
 }
 
 header {
     display: flex;
     flex-direction: row;
-}
-
-.form-width {
-    width: 50%;
 }
 
 h1 {
@@ -218,44 +157,97 @@ h1 {
 h2 {
     font-size: 2rem;
     /* background-color: var(--highlight-color); */
-    background-image: linear-gradient(to right, rgba(255,0,0,0), var(--highlight-color));
-}
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -60px;
-  
-  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, 0), var(--highlight-color));
 }
 
 footer {
     padding: var(--space-large);
 }
 
+
+/* High-level scope Ends */
+
+/* Specific scope Starts Starts */
+
+.icon {
+    width: var(--space-large);
+}
+
+.comic {
+    max-width: 400px;
+}
+
+.profile {
+    max-width: 200px;
+}
+
+.skill-icon {
+    box-sizing: border-box;
+    background-color: var(--contrast-color-light);
+    background-image: linear-gradient(to bottom right, var(--contrast-color-light), var(--shadow-color));
+    ;
+    height: 100px;
+    aspect-ratio: 1;
+    padding: 10px;
+    border: 5px solid var(--contrast-color-dark);
+    border-radius: 50%;
+}
+
+
+.form-width {
+    width: 50%;
+}
+
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: none;
+    width: 120px;
+    background-color: var(--shadow-color);
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Specific scope Ends */
+
+/* Media Starts */
+
+@media screen and (min-width: 400px) {
+
+}
+
+/* 768 mobile
+large mobile
+1024< laptop */
+
+@media screen and (min-width: 768px) {
+   
+    /* section {
+        max-width: 900px;
+    } */
+}
+
+/* Media Ends */
+
 /* * {
     border: 1px solid red;
-    
 } */
