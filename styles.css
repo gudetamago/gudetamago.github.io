@@ -178,7 +178,11 @@ footer {
 }
 
 .profile {
+    display: block;
     max-width: 200px;
+    max-height: 209px;
+    width: auto;
+    height: auto;
 }
 
 .skill-icon {
@@ -231,13 +235,16 @@ footer {
 
 /* Media Starts */
 
+/* @media screen and (max-width: 400px) {
+    header, main, footer {
+        min-width: 400px;
+        margin: auto;
+} */
+
 @media screen and (min-width: 400px) {
     header, main, footer {
         max-width: 600px;
-    }
-    .profile {
-        width: 100px;
-        height: auto;
+        margin: auto;
     }
 }
 
@@ -249,6 +256,7 @@ large mobile
    
     header, main, footer {
         max-width: 900px;
+        margin: auto;
     }
 }
 
