@@ -235,11 +235,13 @@ footer {
 
 /* Media Starts */
 
-/* @media screen and (max-width: 400px) {
-    header, main, footer {
+@media screen and (max-width: 400px) {
+    body {
         min-width: 400px;
         margin: auto;
-} */
+        overflow: scroll;
+    }
+}
 
 @media screen and (min-width: 400px) {
     header, main, footer {
