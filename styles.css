@@ -211,7 +211,7 @@ footer {
 }
 
 .tooltip .tooltiptext {
-    visibility: none;
+    visibility: hidden;
     width: 120px;
     background-color: var(--shadow-color);
     color: black;
@@ -224,6 +224,9 @@ footer {
     left: 50%;
     margin-left: -60px;
 
+    /* Prevent the hidden tooltip from intercepting clicks */
+    pointer-events: none;
+
     /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
     opacity: 0;
     transition: opacity 1s;
@@ -232,6 +235,8 @@ footer {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+    /* Allow interaction when visible if needed */
+    pointer-events: auto;
 }
 
 /* Specific scope Ends */
