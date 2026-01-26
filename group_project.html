@@ -54,7 +54,9 @@
                     <p>Group Project for Full-stack Frogs (that's the team name) was to create a mood/workload tracker to
                         allow a manager to monitor their team's wellbeing. A team member was to log their mood and workload
                         every week, whilst a manager can view a dashboard containing aggregated data logged by their team
-                        members.</p>
+                        members.</p><br>
+                    <p>Kudos to the frontend team for making this really pretty.</p><br>
+                    <img src="img/teampulse_images/00_Homepage.png" alt="Home Page screenshot" style="max-width: 100%; height: auto;">
                 </div>
             </div>
         </section>
@@ -66,8 +68,26 @@
                     <p>When a normal user logged in, they're shown the 'Pulse' check in form. But when a manager logged in, 
                         they're shown a dashboard containing data visualisations of their team's logged data. This required
                         setting up different user roles and permissions in the backend, and then ensuring that the frontend
-                        displayed the correct information based on the user's role.
-                    </p>
+                        displayed the correct information based on the user's role. Below are the 2 screenshots, for user and
+                        manager respectively.</p><br>
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li>
+                            <strong>Home Page (General Mode)</strong>
+                            <br>
+                            <img src="img/teampulse_images/01_LandingPage_User.png" alt="User page for Pulse check in screenshot" style="max-width: 100%; height: auto;"><br><br>
+                        </li><br>
+                        <li>
+                            <strong>Manager Dashboard</strong>
+                            <br>
+                            <img src="img/teampulse_images/01_LandingPage_Manager_a.png" alt="Manager Dashboard screenshot" style="max-width: 100%; height: auto;">
+                        </li><br>
+                        <li>
+                            <strong>Manager List View of Team Pulse</strong>
+                            <br>
+                            <img src="img/teampulse_images/01_LandingPage_Manager_b.png" alt="Manager view of Team Pulse list screenshot" style="max-width: 100%; height: auto;">
+                        </li>
+                    </ul><br>
+                    </p><br>
                 </div>
             </div>
         </section>
@@ -76,12 +96,29 @@
             <h2 class="flex justify-right padding-small">Challenges</h2>
             <div class="flex row justify-center">
                 <div class="flex column justify-center align-left padding-small">
+                    <p>I can only write about challenges faced by the backend, as I chose to not contribute to the frontend.</p><br>
+                    <h3>Weekly Limitations</h3><br>
                     <p>Notable challenge was in ensuring that a team member can only log their data once a week, defining
                         what a 'week' meant, and in displaying the data segregated by team as a manager can manage multiple
                         teams. Discussion had around this topic started a lot of discussion about timezones, and what would
                      be defined as a "week". 2 people on opposite ends of the globe could be logging their Pulse at the same
                      time, and yet for one of them it's Sunday night and for the other it's Monday morning. Should the data be
-                     logged against separate weeks?</p>
+                     logged against separate weeks?</p><br>
+                     <p>Adding to the complexity was that whilst Python (the backend) had built in library to determine what the
+                        current week index was, JavaScript (the frontend) did not. This meant that we would had to implement this
+                        in the front end, and frankly it was beginning to get very complicated. In the end, we decided to let the
+                        frontend simply send the current date and time to the backend, and let the backend determine if the user had already
+                        logged their Pulse for the current week or not.
+                     </p><br>
+                     <p>The design for the database changed as well to accomodate this weekly check. Originally we were only going
+                        to store the timestamp and calculate the week index on the fly, but this would had meant more calculations
+                        and checks every time a user tried to log their Pulse. Instead, we decided to store the week index along with
+                        the timestamp, so that checking if a user had already logged their Pulse for the week would be a simple database query.
+                     </p><br>
+
+                     <h3>Limiting The Number of Pulse Logs</h3>
+
+
                 </div>
             </div>
         </section>
