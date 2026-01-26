@@ -55,7 +55,8 @@
                     <p>For She Codes Plus 2025, the personal project requirement was to do a crowdfunding website, where
                         people can create campaigns and pledge their support for a chosen campaign. We were free to choose
                         a theme for the crowdfunding website, and my chosen theme was a crowdfunding website for supervillains,
-                        as starting and maintaining a villain's lair is a costly affair.</p>
+                        as starting and maintaining a villain's lair is a costly affair. And not all villains are as well-funded 
+                    as Lex Luthor.</p>
                 </div>
             </div>
         </section>
@@ -65,7 +66,49 @@
             <div class="flex row justify-center">
                 <div class="flex column justify-center align-left padding-small">
                     <p>In keeping with the theme, the website was designed to have 2 different look. No self-respecting villain
-                         would be advertising their villainy, so the website needed to look harmless to the general public. </p>
+                         would be advertising their villainy, so the website needed to look harmless to the general public. Specifically,
+                          when you're not logged in, the site would look like a charity crowdfunding knitting website for animals in need.
+                         When logged in, the site would reveal its real purpose.</p><br> 
+                    <p>Below are screenshots for the two different looks for the Home page:</p> <br>
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li>
+                            <strong>Home Page (General Mode)</strong>
+                            <br>
+                            <img src="img/crowdfunding_images/00_Homepage_Logged_Out.png" alt="Home Page for the general public" class="screenshot">
+                        </li><br>
+                        <li>
+                            <strong>Home Page (Villain Mode)</strong>
+                            <br>
+                            <img src="img/crowdfunding_images/00_Homepage_Logged_In.png" alt="Home Page for the villains" class="screenshot">
+                        </li>
+                    </ul><br>
+                    <p>Likewise, the campaign pages also have two different looks.</p>
+                    <p>For the campaign page, every detail except for pledged amount changed. This included campaign title, campaign description, 
+                        the name of the campaign owner, as well as the names of people who pledged.</p><br>
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li>
+                            <strong>Campaign Page (General Mode)</strong>
+                            <br>
+                            <img src="img/crowdfunding_images/04_CampaignPage_Logged_Out.png" alt="Campaign Page for the general public" class="screenshot">
+                        </li><br>
+                        <li>
+                            <strong>Campaign Page (Villain Mode)</strong>
+                            <br>
+                            <img src="img/crowdfunding_images/04_CampaignPage_Logged_In.png" alt="Campaign Page for the villains" class="screenshot">
+                        </li>
+                    </ul><br>
+                    <p>This change of content extended to the About page.</p><br> 
+                    <ul style="list-style: disc; padding-left: 20px;">
+                        <li>
+                            <strong>About Page (General Mode)</strong>
+                            <br>
+                            <img src="img/crowdfunding_images/05_About_LoggedOut.png" alt="About Page for the general public" class="screenshot">
+                        </li><br>
+                        <li>
+                            <strong>About Page (Villain Mode)</strong>
+                            <br>
+                            <img src="img/crowdfunding_images/05_About_LoggedIn.png" alt="About Page for the villains" class="screenshot">
+                        </li>
                 </div>
             </div>
         </section>
@@ -79,6 +122,13 @@
                          accounted for before. This meant I had to go back and modify the backend to provide this information, and then modify the frontend to
                           display this information correctly. The real challenge was in remembering how the backend worked, as at that point in time
                           I had already forgotten everything about the backend code.
+                    </p><br>
+                    <p>Another challenge was in making sure that the content changed correctly based on the user's login status. This
+                        meant adding checks throughout the front end code to see if the user was logged in or not, and then displaying
+                        the appropriate content based on that check. This was especially challenging for the campaign page, as there
+                        were many different elements that needed to change based on the user's login status.</p><br>
+                    <p>Harder than both of the above, was coming up with the campaign descriptions. I had grand ideas of putting in different villains from 
+                        various media, but it was starting to take up more time than actual coding so I settled for the few I've already had.
                     </p>
                 </div>
             </div>
